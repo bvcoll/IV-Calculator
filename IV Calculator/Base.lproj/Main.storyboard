@@ -204,12 +204,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MK4-rf-hvM">
-                                <rect key="frame" x="260" y="225" width="80" height="30"/>
-                                <state key="normal" title="Refine Data"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rlR-yL-uwU">
-                                <rect key="frame" x="20" y="166" width="560" height="51"/>
+                                <rect key="frame" x="20" y="162" width="560" height="51"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ych-Cd-tDk">
                                         <rect key="frame" x="0.0" y="0.0" width="183" height="51"/>
@@ -220,15 +216,15 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="juB-Ap-LLO">
-                                                <rect key="frame" x="0.0" y="21" width="183" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="juB-Ap-LLO">
+                                                <rect key="frame" x="40" y="21" width="103" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="juB-Ap-LLO" secondAttribute="trailing" id="ClC-Dq-Mdh"/>
-                                            <constraint firstItem="juB-Ap-LLO" firstAttribute="leading" secondItem="Ych-Cd-tDk" secondAttribute="leading" id="DCh-Dx-nYx"/>
+                                            <constraint firstAttribute="trailing" secondItem="juB-Ap-LLO" secondAttribute="trailing" constant="40" id="ClC-Dq-Mdh"/>
+                                            <constraint firstItem="juB-Ap-LLO" firstAttribute="leading" secondItem="Ych-Cd-tDk" secondAttribute="leading" constant="40" id="DCh-Dx-nYx"/>
                                             <constraint firstItem="ZQH-rk-94x" firstAttribute="centerX" secondItem="Ych-Cd-tDk" secondAttribute="centerX" id="zsA-eu-zh1"/>
                                         </constraints>
                                     </stackView>
@@ -241,16 +237,16 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="peQ-Op-jeC">
-                                                <rect key="frame" x="0.0" y="21" width="184" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="peQ-Op-jeC">
+                                                <rect key="frame" x="40" y="21" width="104" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="peQ-Op-jeC" firstAttribute="leading" secondItem="LQo-Df-LLg" secondAttribute="leading" id="7k9-AS-e1C"/>
+                                            <constraint firstItem="peQ-Op-jeC" firstAttribute="leading" secondItem="LQo-Df-LLg" secondAttribute="leading" constant="40" id="7k9-AS-e1C"/>
                                             <constraint firstItem="ROj-mC-9iv" firstAttribute="centerX" secondItem="LQo-Df-LLg" secondAttribute="centerX" id="MSH-NR-5j3"/>
-                                            <constraint firstAttribute="trailing" secondItem="peQ-Op-jeC" secondAttribute="trailing" id="s0F-5a-uN8"/>
+                                            <constraint firstAttribute="trailing" secondItem="peQ-Op-jeC" secondAttribute="trailing" constant="40" id="s0F-5a-uN8"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Scv-6V-jCT">
@@ -263,15 +259,15 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t92-dC-1Ei">
-                                                <rect key="frame" x="0.0" y="21" width="183" height="30"/>
+                                                <rect key="frame" x="40" y="21" width="103" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="t92-dC-1Ei" firstAttribute="leading" secondItem="Scv-6V-jCT" secondAttribute="leading" id="1mc-cn-xxK"/>
+                                            <constraint firstItem="t92-dC-1Ei" firstAttribute="leading" secondItem="Scv-6V-jCT" secondAttribute="leading" constant="40" id="1mc-cn-xxK"/>
                                             <constraint firstItem="ucM-PO-SmD" firstAttribute="centerX" secondItem="Scv-6V-jCT" secondAttribute="centerX" id="9aM-PJ-ukx"/>
-                                            <constraint firstAttribute="trailing" secondItem="t92-dC-1Ei" secondAttribute="trailing" id="sMY-KM-OlT"/>
+                                            <constraint firstAttribute="trailing" secondItem="t92-dC-1Ei" secondAttribute="trailing" constant="40" id="sMY-KM-OlT"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -280,18 +276,8 @@
                                     <constraint firstItem="LQo-Df-LLg" firstAttribute="width" secondItem="Scv-6V-jCT" secondAttribute="width" id="jC9-vZ-tEG"/>
                                 </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wXr-eh-r8Y">
-                                <rect key="frame" x="20" y="113" width="560" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="bTI-2o-iNn"/>
-                                </constraints>
-                                <string key="text">You can power up your Pokemon to narrow down IV possibilities. Enter the new data values after powering up once to refine possible IV values.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d6f-UP-USZ">
-                                <rect key="frame" x="20" y="263" width="560" height="337"/>
+                                <rect key="frame" x="20" y="259" width="560" height="341"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YzX-Vj-y9c">
@@ -305,22 +291,38 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DWC-Js-naO">
+                                <rect key="frame" x="241" y="125" width="119" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfl-Xl-EpA">
+                                        <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refine Data:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jed-Xi-cZl">
+                                        <rect key="frame" x="26" y="0.0" width="93" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MK4-rf-hvM">
+                                <rect key="frame" x="278" y="221" width="44" height="30"/>
+                                <state key="normal" title="Refine"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="DWC-Js-naO" firstAttribute="centerX" secondItem="VHp-BU-BJt" secondAttribute="centerX" id="00E-gM-rQP"/>
+                            <constraint firstItem="DWC-Js-naO" firstAttribute="top" secondItem="y53-KU-bLg" secondAttribute="bottom" constant="20" id="EZ9-J7-BIc"/>
                             <constraint firstItem="MK4-rf-hvM" firstAttribute="centerX" secondItem="VHp-BU-BJt" secondAttribute="centerX" id="FwD-1P-AQF"/>
                             <constraint firstItem="BqK-FR-EMu" firstAttribute="top" secondItem="d6f-UP-USZ" secondAttribute="bottom" id="GNU-dp-n6E"/>
                             <constraint firstItem="y53-KU-bLg" firstAttribute="top" secondItem="0xo-bf-sUD" secondAttribute="bottom" constant="8" id="ITz-Zz-0yj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rlR-yL-uwU" secondAttribute="trailing" id="MTt-D2-Cwq"/>
-                            <constraint firstItem="wXr-eh-r8Y" firstAttribute="centerX" secondItem="VHp-BU-BJt" secondAttribute="centerX" id="OXD-ZQ-pxh"/>
                             <constraint firstItem="d6f-UP-USZ" firstAttribute="top" secondItem="MK4-rf-hvM" secondAttribute="bottom" constant="8" id="Xgs-mk-FeD"/>
-                            <constraint firstItem="wXr-eh-r8Y" firstAttribute="leading" secondItem="VHp-BU-BJt" secondAttribute="leadingMargin" id="bec-wb-C5q"/>
                             <constraint firstItem="MK4-rf-hvM" firstAttribute="top" secondItem="rlR-yL-uwU" secondAttribute="bottom" constant="8" id="bgA-Rc-2Ay"/>
                             <constraint firstItem="d6f-UP-USZ" firstAttribute="trailing" secondItem="VHp-BU-BJt" secondAttribute="trailingMargin" id="gMR-lu-7iW"/>
+                            <constraint firstItem="rlR-yL-uwU" firstAttribute="top" secondItem="Jed-Xi-cZl" secondAttribute="bottom" constant="15" id="gR0-zh-Nx4"/>
                             <constraint firstItem="d6f-UP-USZ" firstAttribute="leading" secondItem="VHp-BU-BJt" secondAttribute="leadingMargin" id="gSq-B5-862"/>
-                            <constraint firstItem="rlR-yL-uwU" firstAttribute="top" secondItem="wXr-eh-r8Y" secondAttribute="bottom" constant="8" id="ngH-JD-ZRk"/>
-                            <constraint firstItem="wXr-eh-r8Y" firstAttribute="top" secondItem="y53-KU-bLg" secondAttribute="bottom" constant="8" id="nn4-Hn-3pJ"/>
-                            <constraint firstItem="wXr-eh-r8Y" firstAttribute="trailing" secondItem="VHp-BU-BJt" secondAttribute="trailingMargin" id="pAN-VK-EuN"/>
                             <constraint firstItem="y53-KU-bLg" firstAttribute="centerX" secondItem="VHp-BU-BJt" secondAttribute="centerX" id="tTR-rj-dHB"/>
                             <constraint firstItem="rlR-yL-uwU" firstAttribute="leading" secondItem="VHp-BU-BJt" secondAttribute="leadingMargin" id="wG8-KA-zLs"/>
                         </constraints>
