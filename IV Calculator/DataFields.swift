@@ -20,7 +20,7 @@ let Wartortle = Pokemon(name: "Wartortle", baseAtk: 144, baseDef: 176, baseSta: 
 let Blastoise = Pokemon(name: "Blastoise", baseAtk: 186, baseDef: 222, baseSta: 158, evolution: "None")
 let Caterpie = Pokemon(name: "Caterpie", baseAtk: 62, baseDef: 66, baseSta: 90, evolution: "Metapod")
 let Metapod = Pokemon(name: "Metapod", baseAtk: 56, baseDef: 86, baseSta: 100, evolution: "Butterfree")
-let ButterFree = Pokemon(name: "Butterfree", baseAtk: 144, baseDef: 144, baseSta: 120, evolution: "None")
+let Butterfree = Pokemon(name: "Butterfree", baseAtk: 144, baseDef: 144, baseSta: 120, evolution: "None")
 let Weedle = Pokemon(name: "Weedle", baseAtk: 68, baseDef: 64, baseSta: 80, evolution: "Kakuna")
 let Kakuna = Pokemon(name: "Kakuna", baseAtk: 62, baseDef: 82, baseSta: 90, evolution: "Beedrill")
 let Beedrill = Pokemon(name: "Beedrill", baseAtk: 144, baseDef: 130, baseSta: 130, evolution: "None")
@@ -158,4 +158,4 @@ let Dragonite = Pokemon(name: "Dragonite", baseAtk: 250, baseDef: 212, baseSta: 
 
 
 
-let allPokemon:[Pokemon] = []
+let allPokemon:[Pokemon] = [Bulbasaur, Ivysaur, Venusaur, Charmander, Charmeleon, Charizard, Squirtle, Wartortle, Blastoise, Caterpie, Metapod, Butterfree, Weedle, Kakuna, Beedrill, Pidgey, Pidgeotto, Pidgeot, Rattata, Raticate, Spearow, Fearow, Ekans, Arbok, Pikachu, Raichu, Sandshrew, Sandslash, NidoranF, Nidorina, Nidoqueen, NidoranM, Nidorino, Nidoking, Clefairy, Clefable, Vulpix, Ninetales, Jiggypuff, Wigglytuff, Zubat, Golbat, Oddish, Gloom, Vileploom, Paras, Parasect, Venonat, Venomoth, Diglett, Dugtrio, Meowth, Persian, Psyduck, Golduck, Mankey, Primeape, Growlithe, Arcanine, Poliwag, Poliwhirl, Poliwrath, Abra, Kadabra, Alakazam, Machop, Machoke, Machamp, Bellsprout, Weepinbell, Victreebel, Tentacool, Tentacruel, Geodude, Graveler, Golem, Ponyta, Rapidash, Slowpoke, Slowbro, Magnemite, Magneton, Farfetchd, Doduo, Dodrio, Seel, Dewgong, Grimer, Muk, Shellder, Cloyster, Gastly, Haunter, Gengar, Onix, Drowzee, Hypno, Krabby, Kingler, Voltorb, Electrode, Exeggcute, Exeggutor, Cubone, Marowak, Hitmonlee, Hitmonchan, Lickitung, Koffing, Weezing, Rhyhorn, Rhydon, Chansey, Tangela, Kangaskhan, Horsea, Seadra, Goldeen, Seaking, Staryu, Starmie, MrMime, Scyther, Jynx, Electabuzz, Magmar, Pinsir, Tauros, Magikarp, Gyarados, Lapras, Ditto, Eevee, Vaporeon, Jolteon, Flareon, Porygon, Omanyte, Omastar, Kabuto, Kabutops, Aerodactyl, Snorlax, Dratini, Dragonair, Dragonite]
