@@ -275,6 +275,34 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Lm3-2U-OtZ"/>
                                 </connections>
                             </pickerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4B9-eR-x0Q">
+                                <rect key="frame" x="200" y="253" width="200" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="OAY-TD-Tll"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchedCell" textLabel="yA6-oL-SR4" style="IBUITableViewCellStyleDefault" id="eKc-lN-YpN">
+                                        <rect key="frame" x="0.0" y="28" width="200" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eKc-lN-YpN" id="2S3-IK-FaK">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yA6-oL-SR4">
+                                                    <rect key="frame" x="15" y="0.0" width="170" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -292,12 +320,15 @@
                             <constraint firstItem="w42-bG-TFt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="NUG-sw-4xt"/>
                             <constraint firstItem="8gF-Vu-45q" firstAttribute="top" secondItem="0EF-F7-azo" secondAttribute="bottom" constant="16" id="NtA-Zp-rWz"/>
                             <constraint firstItem="uMm-Ez-QmV" firstAttribute="centerX" secondItem="iga-k1-dHi" secondAttribute="centerX" id="OXR-wc-RgR"/>
+                            <constraint firstItem="4B9-eR-x0Q" firstAttribute="top" secondItem="Azc-7i-TWx" secondAttribute="bottom" id="RwK-bB-xOE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iga-k1-dHi" secondAttribute="trailing" id="UsR-ZF-l5r"/>
                             <constraint firstItem="0EF-F7-azo" firstAttribute="top" secondItem="aOg-Dk-8Ub" secondAttribute="bottom" id="W0O-Ef-12A"/>
                             <constraint firstItem="uMm-Ez-QmV" firstAttribute="centerX" secondItem="0EF-F7-azo" secondAttribute="centerX" id="Wgz-Dq-zKm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="w42-bG-TFt" secondAttribute="trailing" constant="-20" id="ZZr-BS-d5O"/>
+                            <constraint firstItem="4B9-eR-x0Q" firstAttribute="leading" secondItem="Azc-7i-TWx" secondAttribute="leading" id="cj1-HO-Q3w"/>
                             <constraint firstItem="iga-k1-dHi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dt8-3z-62c"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r3v-3q-7CE" secondAttribute="trailing" id="e2h-mF-N7x"/>
+                            <constraint firstItem="4B9-eR-x0Q" firstAttribute="trailing" secondItem="Azc-7i-TWx" secondAttribute="trailing" id="eQ1-01-Plm"/>
                             <constraint firstItem="aOg-Dk-8Ub" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hnf-XO-04n"/>
                             <constraint firstItem="uMm-Ez-QmV" firstAttribute="centerX" secondItem="8gF-Vu-45q" secondAttribute="centerX" id="jbp-e2-LnC"/>
                             <constraint firstItem="0EF-F7-azo" firstAttribute="height" secondItem="aOg-Dk-8Ub" secondAttribute="height" id="mSx-V2-wk1"/>
@@ -315,6 +346,7 @@
                         <outlet property="poweredSegmentedControl" destination="XLu-hN-FVv" id="DYb-7R-ddp"/>
                         <outlet property="sdPickerView" destination="r3v-3q-7CE" id="uaa-Oj-MdB"/>
                         <outlet property="sdTextField" destination="Q3m-i8-dw1" id="Nrz-Jv-FAT"/>
+                        <outlet property="searchedTableView" destination="4B9-eR-x0Q" id="yLX-O2-6nG"/>
                         <outlet property="speciesSearchBar" destination="Azc-7i-TWx" id="KWB-f6-bl7"/>
                     </connections>
                 </viewController>

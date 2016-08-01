@@ -8,9 +8,14 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    var filteredPokemon:[Pokemon] = []
+    var searchActive:Bool = false
+    var selectedPokemon:Pokemon = Pikachu
     
     @IBOutlet weak var speciesSearchBar: UISearchBar!
+    @IBOutlet weak var searchedTableView: UITableView!
     @IBOutlet weak var cpTextField: UITextField!
     @IBOutlet weak var hpTextField: UITextField!
     @IBOutlet weak var sdTextField: UITextField!
@@ -20,12 +25,84 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        speciesSearchBar.delegate = self
+        searchedTableView.delegate = self
+        searchedTableView.dataSource = self
         sdPickerView.hidden = true
+        searchedTableView.hidden = true
         sdTextField.text = String(sdLevels[0])
         self.hideKeyboardWhenTappedAround()
         self.addDoneButtonOnKeyboard()
     }
-
+    
+    //Controlls searchActive boolean depending on searchbar status.//
+    /////////////////////////////////////////////////////////////////
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true;
+        searchedTableView.hidden = false
+    }
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchActive = false;
+        searchedTableView.hidden = true
+    }
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+        searchedTableView.hidden = true
+    }
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+        searchedTableView.hidden = true
+    }
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    /////////////////////////////////////////////////////////////////
+    
+    //Returns the number of rows in the tableview. If the view is being
+    //searched filteredPokemon is counted, allPokemon otherwise.
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(searchActive) {
+            return filteredPokemon.count
+        }
+        return allPokemon.count
+    }
+    
+    //When text in the searchbar changes updates the filteredPokemon list.
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredPokemon = allPokemon.filter{ pokemon in
+            return pokemon.name.lowercaseString.containsString(searchText.lowercaseString)
+        }
+        if(filteredPokemon.count == 0){
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+        self.searchedTableView.reloadData()
+    }
+    
+    //Displays the cell at each row.
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("SearchedCell", forIndexPath: indexPath)
+        let pokemon:Pokemon
+        if(searchActive && speciesSearchBar.text != ""){
+            pokemon = self.filteredPokemon[indexPath.row]
+        } else {
+            pokemon = allPokemon[indexPath.row]
+        }
+        cell.textLabel?.text = pokemon.name
+        return cell
+    }
+    
+    //Sets the selectedPokemon to what is selected in the tableView. NOT WORKING
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if(searchActive && speciesSearchBar.text != ""){
+            selectedPokemon = self.filteredPokemon[indexPath.row]
+        } else {
+            selectedPokemon = allPokemon[indexPath.row]
+        }
+        speciesSearchBar.text = selectedPokemon.name
+    }
+    
     //Retuns the number of columns in sdPickerView.
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1

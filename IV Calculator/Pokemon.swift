@@ -23,7 +23,4 @@ class Pokemon: NSObject{
         self.baseSta = baseSta
         self.evolution = evolution
     }
-    
-    
-
 }
