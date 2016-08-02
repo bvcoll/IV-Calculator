@@ -9,17 +9,19 @@
 import UIKit
 
 class RefineViewController: UIViewController {
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var selectedCpTextField: UITextField!
+    @IBOutlet weak var selectedHpTextField: UITextField!
+    @IBOutlet weak var selectedStardustTextField: UITextField!
+    @IBOutlet weak var refineButton: UIButton!
+    @IBOutlet weak var IVTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
+    
 }

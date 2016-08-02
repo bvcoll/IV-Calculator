@@ -12,7 +12,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     var filteredPokemon:[Pokemon] = []
     var searchActive:Bool = false
-    var selectedPokemon:Pokemon = Pikachu
+    var selectedPokemon:Pokemon = NoPokemonSelected
     
     @IBOutlet weak var speciesSearchBar: UISearchBar!
     @IBOutlet weak var searchedTableView: UITableView!
@@ -29,9 +29,9 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         searchedTableView.delegate = self
         searchedTableView.dataSource = self
         sdPickerView.hidden = true
+        calculateButton.enabled = false
         searchedTableView.hidden = true
         sdTextField.text = String(sdLevels[0])
-        self.hideKeyboardWhenTappedAround()
         self.addDoneButtonOnKeyboard()
     }
     
@@ -58,15 +58,6 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     /////////////////////////////////////////////////////////////////
     
-    //Returns the number of rows in the tableview. If the view is being
-    //searched filteredPokemon is counted, allPokemon otherwise.
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(searchActive) {
-            return filteredPokemon.count
-        }
-        return allPokemon.count
-    }
-    
     //When text in the searchbar changes updates the filteredPokemon list.
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         filteredPokemon = allPokemon.filter{ pokemon in
@@ -78,6 +69,15 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
             searchActive = true;
         }
         self.searchedTableView.reloadData()
+    }
+    
+    //Returns the number of rows in the tableview. If the view is being
+    //searched filteredPokemon is counted, allPokemon otherwise.
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(searchActive) {
+            return filteredPokemon.count
+        }
+        return allPokemon.count
     }
     
     //Displays the cell at each row.
@@ -93,7 +93,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         return cell
     }
     
-    //Sets the selectedPokemon to what is selected in the tableView. NOT WORKING
+    //Sets the selectedPokemon to what is selected in the tableView.
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if(searchActive && speciesSearchBar.text != ""){
             selectedPokemon = self.filteredPokemon[indexPath.row]
@@ -101,6 +101,8 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
             selectedPokemon = allPokemon[indexPath.row]
         }
         speciesSearchBar.text = selectedPokemon.name
+        dismissKeyboard()
+        checkCalcStatus()
     }
     
     //Retuns the number of columns in sdPickerView.
@@ -134,6 +136,11 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         return true
     }
     
+    //When a text field has finished editing calls checkCalcStatus
+    func textFieldDidEndEditing(textField: UITextField) {
+        checkCalcStatus()
+    }
+    
     //Adds a done button above the keyboard for numberpad keyboards.
     func addDoneButtonOnKeyboard(){
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
@@ -157,6 +164,15 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     func doneButtonAction(){
         self.cpTextField.resignFirstResponder()
         self.hpTextField.resignFirstResponder()
+    }
+    
+    //Checks if all text fields have been completed, if they have enables calculateButton.
+    func checkCalcStatus(){
+        if(selectedPokemon != NoPokemonSelected && cpTextField.text != "" && hpTextField.text != ""){
+            calculateButton.enabled = true
+        } else {
+            calculateButton.enabled = false
+        }
     }
 
     @IBAction func cancelToCalculatorViewController(segue:UIStoryboardSegue) {
