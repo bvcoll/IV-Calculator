@@ -523,15 +523,21 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7iP-Mi-OFw">
+                                <rect key="frame" x="20" y="384" width="560" height="216"/>
+                                <color key="backgroundColor" red="0.92493990380000002" green="0.92493990380000002" blue="0.92493990380000002" alpha="0.70355603450000004" colorSpace="calibratedRGB"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DWC-Js-naO" firstAttribute="centerX" secondItem="VHp-BU-BJt" secondAttribute="centerX" id="00E-gM-rQP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7iP-Mi-OFw" secondAttribute="trailing" id="1mK-7l-Tza"/>
                             <constraint firstItem="DWC-Js-naO" firstAttribute="top" secondItem="y53-KU-bLg" secondAttribute="bottom" constant="5" id="EZ9-J7-BIc"/>
                             <constraint firstItem="MK4-rf-hvM" firstAttribute="centerX" secondItem="VHp-BU-BJt" secondAttribute="centerX" id="FwD-1P-AQF"/>
                             <constraint firstItem="BqK-FR-EMu" firstAttribute="top" secondItem="d6f-UP-USZ" secondAttribute="bottom" id="GNU-dp-n6E"/>
                             <constraint firstItem="y53-KU-bLg" firstAttribute="top" secondItem="0xo-bf-sUD" secondAttribute="bottom" constant="8" id="ITz-Zz-0yj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rlR-yL-uwU" secondAttribute="trailing" id="MTt-D2-Cwq"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="7iP-Mi-OFw" secondAttribute="bottom" id="VNS-Ce-83h"/>
                             <constraint firstItem="d6f-UP-USZ" firstAttribute="top" secondItem="I1e-mG-s4d" secondAttribute="bottom" constant="8" id="Zvh-bW-JR7"/>
                             <constraint firstItem="I1e-mG-s4d" firstAttribute="top" secondItem="MK4-rf-hvM" secondAttribute="bottom" constant="3" id="bPz-vi-mhN"/>
                             <constraint firstItem="MK4-rf-hvM" firstAttribute="top" secondItem="rlR-yL-uwU" secondAttribute="bottom" constant="8" id="bgA-Rc-2Ay"/>
@@ -539,6 +545,7 @@
                             <constraint firstItem="rlR-yL-uwU" firstAttribute="top" secondItem="Jed-Xi-cZl" secondAttribute="bottom" constant="5" id="gR0-zh-Nx4"/>
                             <constraint firstItem="d6f-UP-USZ" firstAttribute="leading" secondItem="VHp-BU-BJt" secondAttribute="leadingMargin" id="gSq-B5-862"/>
                             <constraint firstItem="I1e-mG-s4d" firstAttribute="leading" secondItem="VHp-BU-BJt" secondAttribute="leadingMargin" id="ofr-rt-w6P"/>
+                            <constraint firstItem="7iP-Mi-OFw" firstAttribute="leading" secondItem="VHp-BU-BJt" secondAttribute="leadingMargin" id="qez-VT-Zc6"/>
                             <constraint firstItem="y53-KU-bLg" firstAttribute="centerX" secondItem="VHp-BU-BJt" secondAttribute="centerX" id="tTR-rj-dHB"/>
                             <constraint firstItem="rlR-yL-uwU" firstAttribute="leading" secondItem="VHp-BU-BJt" secondAttribute="leadingMargin" id="wG8-KA-zLs"/>
                         </constraints>

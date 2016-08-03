@@ -174,6 +174,28 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
             calculateButton.enabled = false
         }
     }
+    
+    //Returns a boolean depending on the segmentedControl status.
+    func isPowered() -> Bool{
+        let segTitle:String = poweredSegmentedControl.titleForSegmentAtIndex(poweredSegmentedControl.selectedSegmentIndex)!
+        
+        if(segTitle == "Yes"){
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        let navViewController:UINavigationController = segue.destinationViewController as! UINavigationController
+        let DestViewController = navViewController.topViewController as! RefineViewController
+        
+        DestViewController.selectedCP = Int(cpTextField.text!)!
+        DestViewController.selectedHP = Int(hpTextField.text!)!
+        DestViewController.selectedSD = Int(sdTextField.text!)!
+        DestViewController.isPowered = isPowered()
+        DestViewController.selectedPokemon = self.selectedPokemon
+    }
 
     @IBAction func cancelToCalculatorViewController(segue:UIStoryboardSegue) {
     }
