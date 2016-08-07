@@ -12,9 +12,9 @@ class IV: NSObject {
     
     var atk:Int8
     var def:Int8
-    var sta:Int8
+    var sta:Int
     
-    init(atk:Int8, def:Int8, sta:Int8) {
+    init(atk:Int8, def:Int8, sta:Int) {
         self.atk = atk
         self.def = def
         self.sta = sta
