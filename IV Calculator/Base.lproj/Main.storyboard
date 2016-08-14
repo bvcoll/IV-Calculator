@@ -28,7 +28,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SFM-Zb-wLd">
-                                            <rect key="frame" x="10" y="8" width="279" height="50"/>
+                                            <rect key="frame" x="10" y="8" width="280" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon IV Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjY-vg-0FW">
                                                     <rect key="frame" x="8" y="0.0" width="264" height="33"/>
@@ -37,7 +37,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for Pokemon GO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPG-JO-nfa">
-                                                    <rect key="frame" x="79" y="33" width="121" height="17"/>
+                                                    <rect key="frame" x="79" y="33" width="122" height="17"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -268,14 +268,6 @@
                                 </constraints>
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3v-3q-7CE">
-                                <rect key="frame" x="20" y="384" width="560" height="216"/>
-                                <color key="backgroundColor" red="0.92493990384615388" green="0.92493990384615388" blue="0.92493990384615388" alpha="0.70355603448275861" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="GXs-mv-ESz"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Lm3-2U-OtZ"/>
-                                </connections>
-                            </pickerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4B9-eR-x0Q">
                                 <rect key="frame" x="200" y="253" width="200" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -304,6 +296,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3v-3q-7CE">
+                                <rect key="frame" x="20" y="384" width="560" height="216"/>
+                                <color key="backgroundColor" red="0.92493990384615388" green="0.92493990384615388" blue="0.92493990384615388" alpha="0.70355603448275861" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="GXs-mv-ESz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Lm3-2U-OtZ"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -391,7 +391,10 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="juB-Ap-LLO">
                                                 <rect key="frame" x="20" y="21" width="143" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="OuY-se-8RQ" id="KQ0-dp-EBk"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -412,7 +415,10 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="peQ-Op-jeC">
                                                 <rect key="frame" x="20" y="21" width="144" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="OuY-se-8RQ" id="q5R-58-yLk"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -434,6 +440,9 @@
                                                 <rect key="frame" x="20" y="21" width="143" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="OuY-se-8RQ" id="nYG-xS-ECf"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -465,13 +474,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MK4-rf-hvM">
                                 <rect key="frame" x="278" y="196" width="44" height="30"/>
                                 <state key="normal" title="Refine"/>
+                                <connections>
+                                    <action selector="refine:" destination="OuY-se-8RQ" eventType="touchUpInside" id="6rF-7N-Q0B"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Possible IV Stats:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1e-mG-s4d">
-                                <rect key="frame" x="20" y="229" width="132" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d6f-UP-USZ">
                                 <rect key="frame" x="20" y="258" width="560" height="342"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -526,7 +532,17 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7iP-Mi-OFw">
                                 <rect key="frame" x="20" y="384" width="560" height="216"/>
                                 <color key="backgroundColor" red="0.92493990380000002" green="0.92493990380000002" blue="0.92493990380000002" alpha="0.70355603450000004" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OuY-se-8RQ" id="jqp-6a-EFj"/>
+                                    <outlet property="delegate" destination="OuY-se-8RQ" id="mH4-49-BDc"/>
+                                </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Possible IV Stats:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1e-mG-s4d">
+                                <rect key="frame" x="20" y="229" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -559,8 +575,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="IVTableView" destination="d6f-UP-USZ" id="5ip-lb-ot5"/>
+                        <outlet property="determinedLabel" destination="I1e-mG-s4d" id="hP6-ib-tl5"/>
                         <outlet property="nameLabel" destination="y53-KU-bLg" id="6ij-YE-lHn"/>
                         <outlet property="refineButton" destination="MK4-rf-hvM" id="hrL-tt-ueh"/>
+                        <outlet property="sdPickerView" destination="7iP-Mi-OFw" id="nRq-rE-FsO"/>
                         <outlet property="selectedCpTextField" destination="juB-Ap-LLO" id="Bfi-DS-QWY"/>
                         <outlet property="selectedHpTextField" destination="peQ-Op-jeC" id="FuX-pd-102"/>
                         <outlet property="selectedStardustTextField" destination="t92-dC-1Ei" id="MRq-BU-MH2"/>
