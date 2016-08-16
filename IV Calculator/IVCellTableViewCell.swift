@@ -13,12 +13,14 @@ class IVCellTableViewCell: UITableViewCell {
     @IBOutlet weak var atkLabel: UILabel!
     @IBOutlet weak var defLabel: UILabel!
     @IBOutlet weak var staLabel: UILabel!
+    @IBOutlet weak var percLabel: UILabel!
 
     var iv: IV! {
         didSet {
-            atkLabel.text = String(iv.atk)
-            defLabel.text = String(iv.def)
-            staLabel.text = String(iv.sta)
+            atkLabel.text = "Atk: "+String(iv.atk)
+            defLabel.text = "Def: "+String(iv.def)
+            staLabel.text = "Sta: "+String(iv.sta)
+            percLabel.text = String(round(Double((iv.atk + iv.def + iv.sta))/45*100*100)/100)+"%"
         }
     }
 

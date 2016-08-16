@@ -501,16 +501,22 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngr-qq-dgG">
-                                                            <rect key="frame" x="231" y="0.0" width="42" height="27"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngr-qq-dgG">
+                                                            <rect key="frame" x="154" y="0.0" width="42" height="27"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzs-ZU-MSv">
-                                                            <rect key="frame" x="462" y="0.0" width="42" height="27"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzs-ZU-MSv">
+                                                            <rect key="frame" x="308" y="0.0" width="42" height="27"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIg-tF-lLP">
+                                                            <rect key="frame" x="462" y="0.0" width="42" height="27"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -526,6 +532,7 @@
                                         <connections>
                                             <outlet property="atkLabel" destination="rUK-GV-5cn" id="mgC-Sw-Nhb"/>
                                             <outlet property="defLabel" destination="ngr-qq-dgG" id="0L7-4u-fqh"/>
+                                            <outlet property="percLabel" destination="nIg-tF-lLP" id="aUM-Jj-jOc"/>
                                             <outlet property="staLabel" destination="dzs-ZU-MSv" id="mmI-wH-LOi"/>
                                         </connections>
                                     </tableViewCell>
@@ -572,7 +579,7 @@
                     <navigationItem key="navigationItem" id="5eg-60-52K">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hg7-Mm-xU2">
                             <connections>
-                                <segue destination="vKO-JX-dDt" kind="unwind" unwindAction="cancelToCalculatorViewController:" id="vhd-pL-yrF"/>
+                                <segue destination="vKO-JX-dDt" kind="unwind" identifier="unwindToCalc" unwindAction="cancelToCalculatorViewController:" id="vhd-pL-yrF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -21,6 +21,12 @@ class RefineViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var determinedLabel: UILabel!
     @IBOutlet weak var popUpInfoButton: UIButton!
     
+    enum InputError: ErrorType {
+        case HPError
+        case CPError
+        case InitialError
+    }
+    
     var selectedPokemon:Pokemon = NoPokemonSelected
     var selectedCP:Int = 0
     var selectedHP:Int = 0
@@ -39,7 +45,16 @@ class RefineViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         selectedStardustTextField.text = String(sdLevels[0])
         
         nameLabel.text = selectedPokemon.name
-        possibleIVs = getIVs(selectedSD, hp: selectedHP, cp: selectedCP, powered: isPowered)
+        
+        //Trys to calculate initial IVs given starting information.
+        do{
+            try possibleIVs = getIVs(selectedSD, hp: selectedHP, cp: selectedCP, powered: isPowered)
+        }
+        catch {
+            handleError(InputError.InitialError)
+        }
+        
+        //If the table contains only one value changes the label to display that the IV has been determined.
         if(possibleIVs.count == 1){
             determinedLabel.text = "IV Value Determined!"
         } else {
@@ -54,8 +69,24 @@ class RefineViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         selectedSD = Int(selectedStardustTextField.text!)!
         
         var determinedIVs:[IV] = []
-        var possibleNewIvs:[IV] = getIVs(selectedSD, hp: selectedHP, cp: selectedCP, powered: true)
+        var possibleNewIvs:[IV] = []
         
+        do{
+            try possibleNewIvs = getIVs(selectedSD, hp: selectedHP, cp: selectedCP, powered: true)
+        }
+        catch let error as InputError {
+            //If refinement data is not correct throws an error and clears the data.
+            handleError(error)
+            selectedCpTextField.text = ""
+            selectedHpTextField.text = ""
+            return
+        }
+        catch {
+            print("Something went wrong.")
+            return
+        }
+        
+        //Compare data found during refinement to previous data and add matches to an array to be returned.
         for i in 0...possibleNewIvs.count-1 {
             for j in 0...possibleIVs.count-1 {
                 if(possibleNewIvs[i].atk == possibleIVs[j].atk && possibleNewIvs[i].def == possibleIVs[j].def && possibleNewIvs[i].sta == possibleIVs[j].sta){
@@ -63,24 +94,18 @@ class RefineViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 }
             }
         }
-        if(determinedIVs.isEmpty){
-            //insert error throw
-        } else {
-            
-            possibleIVs = determinedIVs
-            IVTableView.reloadSections(NSMutableIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Fade)
-            
-            selectedHpTextField.text = ""
-            selectedCpTextField.text = ""
-            
-            if(possibleIVs.count == 1){
-                determinedLabel.text = "IV Value Determined!"
-            } else {
-                determinedLabel.text = "Possible IV Stats:"
-            }
-            checkRefineStatus()
-        }
+        possibleIVs = determinedIVs
+        IVTableView.reloadSections(NSMutableIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Fade)
         
+        selectedHpTextField.text = ""
+        selectedCpTextField.text = ""
+        
+        if(possibleIVs.count == 1){
+            determinedLabel.text = "IV Value Determined!"
+        } else {
+            determinedLabel.text = "Possible IV Stats:"
+        }
+        checkRefineStatus()
     }
     
     //Displays a pop-up that explains the refine functionality
@@ -174,7 +199,7 @@ class RefineViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     //Takes in SD, HP, CP and powered values and returns a list of all possible IVs
-    func getIVs(stardust:Int, hp:Int, cp:Int, powered:Bool) -> [IV] {
+    func getIVs(stardust:Int, hp:Int, cp:Int, powered:Bool) throws -> [IV] {
         //Finds the possible levels for each stardust value.
         var possibleLevels:[Double] = []
         var startingLevel:Double = 0
@@ -204,7 +229,7 @@ class RefineViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
         
         if(possibleHPsAndLevels.isEmpty){
-            //throw invalid HP error.
+            throw InputError.HPError
         }
         
         //Returns the list of possible IVs given the STA and HP tuples.
@@ -224,15 +249,56 @@ class RefineViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 }
             }
         }
+        if(possibleIVs.isEmpty){
+            throw InputError.CPError
+        }
+        
         return possibleIVs
     }
     
     //Checks if all text fields have been completed, if they have enables calculateButton.
     func checkRefineStatus(){
-        if(selectedCpTextField.text != "" && selectedHpTextField.text != ""){
+        if(selectedCpTextField.text != "" && selectedHpTextField.text != "" && possibleIVs.count != 1){
             refineButton.enabled = true
         } else {
             refineButton.enabled = false
         }
+    }
+    
+    //Displays a pop up noting the error.
+    func handleError(error:InputError){
+        switch error {
+        case .HPError:
+            let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PopUpID") as! PopUpViewController
+            
+            popOverVC.popUpTitle = "HP Value Incorrect:"
+            popOverVC.popUpInformation = "The value you entered for Pokemon HP is not correct."
+            
+            self.addChildViewController(popOverVC)
+            popOverVC.view.frame = self.view.frame
+            self.view.addSubview(popOverVC.view)
+            popOverVC.didMoveToParentViewController(self)
+            
+        case .CPError:
+            let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PopUpID") as! PopUpViewController
+            
+            popOverVC.popUpTitle = "CP Value Incorrect:"
+            popOverVC.popUpInformation = "The value you entered for Pokemon CP is not correct."
+            
+            self.addChildViewController(popOverVC)
+            popOverVC.view.frame = self.view.frame
+            self.view.addSubview(popOverVC.view)
+            popOverVC.didMoveToParentViewController(self)
+        
+        case .InitialError:
+            let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PopUpID") as! PopUpViewController
+            
+            popOverVC.popUpTitle = "A Value is Incorrect:"
+            popOverVC.popUpInformation = "One of the values you entered for your Pokemon is not correct. Make sure to double check all values."
+            
+            self.addChildViewController(popOverVC)
+            popOverVC.view.frame = self.view.frame
+            self.view.addSubview(popOverVC.view)
+            popOverVC.didMoveToParentViewController(self)        }
     }
 }
