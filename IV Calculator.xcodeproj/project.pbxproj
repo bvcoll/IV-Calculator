@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99092A361D62CD5900A809F3 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99092A351D62CD5900A809F3 /* PopUpViewController.swift */; };
 		99442A821D5067A9006D947B /* IV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99442A811D5067A9006D947B /* IV.swift */; };
 		99442A841D5068E5006D947B /* IVCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99442A831D5068E5006D947B /* IVCellTableViewCell.swift */; };
 		99DCC4901D49B25F00F6CF60 /* RefineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DCC48F1D49B25F00F6CF60 /* RefineViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		99092A351D62CD5900A809F3 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		99442A811D5067A9006D947B /* IV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IV.swift; sourceTree = "<group>"; };
 		99442A831D5068E5006D947B /* IVCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IVCellTableViewCell.swift; sourceTree = "<group>"; };
 		99DCC48F1D49B25F00F6CF60 /* RefineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefineViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				99FC066A1D470E8900092361 /* AppDelegate.swift */,
 				99FC066C1D470E8900092361 /* CalculatorViewController.swift */,
 				99DCC48F1D49B25F00F6CF60 /* RefineViewController.swift */,
+				99092A351D62CD5900A809F3 /* PopUpViewController.swift */,
 				99DCC4931D4C2BEF00F6CF60 /* Pokemon.swift */,
 				99442A811D5067A9006D947B /* IV.swift */,
 				99442A831D5068E5006D947B /* IVCellTableViewCell.swift */,
@@ -278,6 +281,7 @@
 				99FC066D1D470E8900092361 /* CalculatorViewController.swift in Sources */,
 				99FC066B1D470E8900092361 /* AppDelegate.swift in Sources */,
 				99DCC4901D49B25F00F6CF60 /* RefineViewController.swift in Sources */,
+				99092A361D62CD5900A809F3 /* PopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

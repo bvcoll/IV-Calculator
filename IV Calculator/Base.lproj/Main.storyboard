@@ -462,6 +462,9 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfl-Xl-EpA">
                                         <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                        <connections>
+                                            <action selector="showPopUp:" destination="OuY-se-8RQ" eventType="touchUpInside" id="8AW-De-Zfa"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refine Data:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jed-Xi-cZl">
                                         <rect key="frame" x="26" y="0.0" width="93" height="22"/>
@@ -577,6 +580,7 @@
                         <outlet property="IVTableView" destination="d6f-UP-USZ" id="5ip-lb-ot5"/>
                         <outlet property="determinedLabel" destination="I1e-mG-s4d" id="hP6-ib-tl5"/>
                         <outlet property="nameLabel" destination="y53-KU-bLg" id="6ij-YE-lHn"/>
+                        <outlet property="popUpInfoButton" destination="qfl-Xl-EpA" id="xIc-J2-9Ch"/>
                         <outlet property="refineButton" destination="MK4-rf-hvM" id="hrL-tt-ueh"/>
                         <outlet property="sdPickerView" destination="7iP-Mi-OFw" id="nRq-rE-FsO"/>
                         <outlet property="selectedCpTextField" destination="juB-Ap-LLO" id="Bfi-DS-QWY"/>
@@ -606,6 +610,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDz-RO-UG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1401" y="486"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="Sa6-x4-AoR">
+            <objects>
+                <viewController storyboardIdentifier="PopUpID" id="JgP-pQ-zzd" customClass="PopUpViewController" customModule="IV_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vhy-Yw-6mb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Clr-lp-FTt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dII-ka-dFp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYB-PA-qz9">
+                                <rect key="frame" x="140" y="180" width="320" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZd-x3-lYK">
+                                        <rect key="frame" x="8" y="202" width="304" height="30"/>
+                                        <state key="normal" title="Ok"/>
+                                        <connections>
+                                            <action selector="closePopUp:" destination="JgP-pQ-zzd" eventType="touchUpInside" id="ula-LN-EcX"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Error:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzS-Tt-g72">
+                                        <rect key="frame" x="8" y="8" width="304" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LFa-4j-LvZ">
+                                        <rect key="frame" x="40" y="56" width="240" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="Anv-W5-VQu"/>
+                                            <constraint firstAttribute="height" constant="128" id="aRk-x0-pTg"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="GZd-x3-lYK" firstAttribute="centerX" secondItem="CYB-PA-qz9" secondAttribute="centerX" id="KTJ-E3-mfP"/>
+                                    <constraint firstAttribute="trailing" secondItem="GZd-x3-lYK" secondAttribute="trailing" constant="8" id="KdJ-0z-3CP"/>
+                                    <constraint firstAttribute="trailing" secondItem="MzS-Tt-g72" secondAttribute="trailing" constant="8" id="O7J-NP-70S"/>
+                                    <constraint firstAttribute="height" constant="240" id="PsC-wp-Fyz"/>
+                                    <constraint firstItem="MzS-Tt-g72" firstAttribute="top" secondItem="CYB-PA-qz9" secondAttribute="top" constant="8" id="QZQ-03-XWx"/>
+                                    <constraint firstItem="MzS-Tt-g72" firstAttribute="centerX" secondItem="CYB-PA-qz9" secondAttribute="centerX" id="SYL-C8-uHB"/>
+                                    <constraint firstItem="LFa-4j-LvZ" firstAttribute="centerY" secondItem="CYB-PA-qz9" secondAttribute="centerY" id="TSG-Zr-hO7"/>
+                                    <constraint firstItem="GZd-x3-lYK" firstAttribute="leading" secondItem="CYB-PA-qz9" secondAttribute="leading" constant="8" id="d2N-NW-s4q"/>
+                                    <constraint firstAttribute="width" constant="320" id="ect-5h-q39"/>
+                                    <constraint firstAttribute="bottom" secondItem="GZd-x3-lYK" secondAttribute="bottom" constant="8" id="h5c-Vy-u2u"/>
+                                    <constraint firstItem="MzS-Tt-g72" firstAttribute="leading" secondItem="CYB-PA-qz9" secondAttribute="leading" constant="8" id="iRP-1y-XM2"/>
+                                    <constraint firstItem="LFa-4j-LvZ" firstAttribute="centerX" secondItem="CYB-PA-qz9" secondAttribute="centerX" id="xwC-4b-1rL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CYB-PA-qz9" firstAttribute="centerX" secondItem="dII-ka-dFp" secondAttribute="centerX" id="Sau-K7-0J1"/>
+                            <constraint firstItem="CYB-PA-qz9" firstAttribute="centerY" secondItem="dII-ka-dFp" secondAttribute="centerY" id="aTr-n8-BGq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="informationTextView" destination="LFa-4j-LvZ" id="jII-XR-QCf"/>
+                        <outlet property="titleLabel" destination="MzS-Tt-g72" id="dfT-sd-rDb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4QN-Po-wei" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401" y="1290"/>
         </scene>
     </scenes>
     <resources>

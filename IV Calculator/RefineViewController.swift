@@ -19,6 +19,7 @@ class RefineViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var IVTableView: UITableView!
     @IBOutlet weak var sdPickerView: UIPickerView!
     @IBOutlet weak var determinedLabel: UILabel!
+    @IBOutlet weak var popUpInfoButton: UIButton!
     
     var selectedPokemon:Pokemon = NoPokemonSelected
     var selectedCP:Int = 0
@@ -81,6 +82,20 @@ class RefineViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
         
     }
+    
+    //Displays a pop-up that explains the refine functionality
+    @IBAction func showPopUp(sender: UIButton) {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PopUpID") as! PopUpViewController
+        
+        popOverVC.popUpTitle = "Refine Pokemon Data:"
+        popOverVC.popUpInformation = "Power up your Pokemon once and enter in the new CP, HP and stardust values shown to narrow down the IV data. View the current IV percentages to be sure that powering up is worth the extra stardust."
+        
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMoveToParentViewController(self)
+    }
+    
     
     //Sets the number of tableView rows to the number of possible IV combinations.
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
