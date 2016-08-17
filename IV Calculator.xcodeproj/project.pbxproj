@@ -8,6 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		99092A361D62CD5900A809F3 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99092A351D62CD5900A809F3 /* PopUpViewController.swift */; };
+		99399CBF1D6408B000697097 /* MMAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CBE1D6408B000697097 /* MMAdSDK.framework */; };
+		99399CC11D6408E600697097 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CC01D6408E600697097 /* AdSupport.framework */; };
+		99399CC31D6408F900697097 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CC21D6408F900697097 /* AudioToolbox.framework */; };
+		99399CC51D64090600697097 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CC41D64090600697097 /* AVFoundation.framework */; };
+		99399CC71D64091500697097 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CC61D64091500697097 /* CoreBluetooth.framework */; };
+		99399CC91D64091E00697097 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CC81D64091E00697097 /* CoreGraphics.framework */; };
+		99399CCB1D64095100697097 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CCA1D64095100697097 /* CoreLocation.framework */; };
+		99399CCD1D64095F00697097 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CCC1D64095F00697097 /* CoreTelephony.framework */; };
+		99399CCF1D64096700697097 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CCE1D64096700697097 /* CoreMedia.framework */; };
+		99399CD11D64097A00697097 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CD01D64097A00697097 /* EventKit.framework */; };
+		99399CD31D64098400697097 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CD21D64098300697097 /* EventKitUI.framework */; };
+		99399CD51D64098C00697097 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CD41D64098C00697097 /* Foundation.framework */; };
+		99399CD71D6409A600697097 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CD61D6409A600697097 /* libxml2.tbd */; };
+		99399CD91D6409EE00697097 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CD81D6409EE00697097 /* MediaPlayer.framework */; };
+		99399CDB1D6409FF00697097 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CDA1D6409FF00697097 /* MessageUI.framework */; };
+		99399CDD1D640A0E00697097 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CDC1D640A0E00697097 /* StoreKit.framework */; };
+		99399CDF1D640A1700697097 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CDE1D640A1700697097 /* SystemConfiguration.framework */; };
+		99399CE11D640A2200697097 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99399CE01D640A2200697097 /* UIKit.framework */; };
 		99442A821D5067A9006D947B /* IV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99442A811D5067A9006D947B /* IV.swift */; };
 		99442A841D5068E5006D947B /* IVCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99442A831D5068E5006D947B /* IVCellTableViewCell.swift */; };
 		99DCC4901D49B25F00F6CF60 /* RefineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DCC48F1D49B25F00F6CF60 /* RefineViewController.swift */; };
@@ -41,6 +59,24 @@
 
 /* Begin PBXFileReference section */
 		99092A351D62CD5900A809F3 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		99399CBE1D6408B000697097 /* MMAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMAdSDK.framework; path = "IV Calculator/MMAdSDK.framework"; sourceTree = "<group>"; };
+		99399CC01D6408E600697097 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		99399CC21D6408F900697097 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		99399CC41D64090600697097 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		99399CC61D64091500697097 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		99399CC81D64091E00697097 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		99399CCA1D64095100697097 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		99399CCC1D64095F00697097 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		99399CCE1D64096700697097 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		99399CD01D64097A00697097 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		99399CD21D64098300697097 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		99399CD41D64098C00697097 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		99399CD61D6409A600697097 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		99399CD81D6409EE00697097 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		99399CDA1D6409FF00697097 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		99399CDC1D640A0E00697097 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		99399CDE1D640A1700697097 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		99399CE01D640A2200697097 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		99442A811D5067A9006D947B /* IV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IV.swift; sourceTree = "<group>"; };
 		99442A831D5068E5006D947B /* IVCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IVCellTableViewCell.swift; sourceTree = "<group>"; };
 		99DCC48F1D49B25F00F6CF60 /* RefineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefineViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +102,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99399CE11D640A2200697097 /* UIKit.framework in Frameworks */,
+				99399CDF1D640A1700697097 /* SystemConfiguration.framework in Frameworks */,
+				99399CDD1D640A0E00697097 /* StoreKit.framework in Frameworks */,
+				99399CDB1D6409FF00697097 /* MessageUI.framework in Frameworks */,
+				99399CD91D6409EE00697097 /* MediaPlayer.framework in Frameworks */,
+				99399CD71D6409A600697097 /* libxml2.tbd in Frameworks */,
+				99399CD51D64098C00697097 /* Foundation.framework in Frameworks */,
+				99399CD31D64098400697097 /* EventKitUI.framework in Frameworks */,
+				99399CD11D64097A00697097 /* EventKit.framework in Frameworks */,
+				99399CCF1D64096700697097 /* CoreMedia.framework in Frameworks */,
+				99399CCD1D64095F00697097 /* CoreTelephony.framework in Frameworks */,
+				99399CCB1D64095100697097 /* CoreLocation.framework in Frameworks */,
+				99399CC91D64091E00697097 /* CoreGraphics.framework in Frameworks */,
+				99399CC71D64091500697097 /* CoreBluetooth.framework in Frameworks */,
+				99399CC51D64090600697097 /* AVFoundation.framework in Frameworks */,
+				99399CC31D6408F900697097 /* AudioToolbox.framework in Frameworks */,
+				99399CC11D6408E600697097 /* AdSupport.framework in Frameworks */,
+				99399CBF1D6408B000697097 /* MMAdSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,9 +140,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99399CE21D640A5100697097 /* AddedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				99399CBE1D6408B000697097 /* MMAdSDK.framework */,
+				99399CE01D640A2200697097 /* UIKit.framework */,
+				99399CDE1D640A1700697097 /* SystemConfiguration.framework */,
+				99399CDC1D640A0E00697097 /* StoreKit.framework */,
+				99399CDA1D6409FF00697097 /* MessageUI.framework */,
+				99399CD81D6409EE00697097 /* MediaPlayer.framework */,
+				99399CD61D6409A600697097 /* libxml2.tbd */,
+				99399CD41D64098C00697097 /* Foundation.framework */,
+				99399CD21D64098300697097 /* EventKitUI.framework */,
+				99399CD01D64097A00697097 /* EventKit.framework */,
+				99399CCE1D64096700697097 /* CoreMedia.framework */,
+				99399CCC1D64095F00697097 /* CoreTelephony.framework */,
+				99399CCA1D64095100697097 /* CoreLocation.framework */,
+				99399CC81D64091E00697097 /* CoreGraphics.framework */,
+				99399CC61D64091500697097 /* CoreBluetooth.framework */,
+				99399CC41D64090600697097 /* AVFoundation.framework */,
+				99399CC21D6408F900697097 /* AudioToolbox.framework */,
+				99399CC01D6408E600697097 /* AdSupport.framework */,
+			);
+			name = AddedFiles;
+			sourceTree = "<group>";
+		};
 		99FC065E1D470E8900092361 = {
 			isa = PBXGroup;
 			children = (
+				99399CE21D640A5100697097 /* AddedFiles */,
 				99FC06691D470E8900092361 /* IV Calculator */,
 				99FC067E1D470E8900092361 /* IV CalculatorTests */,
 				99FC06891D470E8900092361 /* IV CalculatorUITests */,
@@ -425,8 +505,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IV",
+					Calculator,
+				);
 				INFOPLIST_FILE = "IV Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brandoncoll.IV-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -436,8 +522,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IV",
+					Calculator,
+				);
 				INFOPLIST_FILE = "IV Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brandoncoll.IV-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -21,6 +21,16 @@ class IVCellTableViewCell: UITableViewCell {
             defLabel.text = "Def: "+String(iv.def)
             staLabel.text = "Sta: "+String(iv.sta)
             percLabel.text = String(round(Double((iv.atk + iv.def + iv.sta))/45*100*100)/100)+"%"
+            
+            if(round(Double((iv.atk + iv.def + iv.sta))/45*100*100)/100 >= 75){
+                percLabel.textColor = UIColor.blueColor()
+            } else if(round(Double((iv.atk + iv.def + iv.sta))/45*100*100)/100 >= 50){
+                percLabel.textColor = UIColor.greenColor()
+            } else if(round(Double((iv.atk + iv.def + iv.sta))/45*100*100)/100 >= 25){
+                percLabel.textColor = UIColor.yellowColor()
+            } else {
+                percLabel.textColor = UIColor.redColor()
+            }
         }
     }
 
